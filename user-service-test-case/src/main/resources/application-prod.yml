@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+spring:
+  r2dbc:
+    url: ${R_POSTGRES_SERVER}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+  flyway:
+    url: ${POSTGRES_SERVER}
+    user: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+
+
+management:
+  endpoints:
+    web:
+      base-path: /management/actuator
+      exposure:
+        include: openapi, health, prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    distribution:
+      percentiles-histogram:
+        "[http.server.requests]": true
+
+clients:
+  auth-service: ${AUTH_SERVICE_URL}

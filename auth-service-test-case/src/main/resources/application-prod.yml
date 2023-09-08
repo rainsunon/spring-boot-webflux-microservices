@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      base-path: /management/actuator
+      exposure:
+        include: openapi, health, prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    distribution:
+      percentiles-histogram:
+        "[http.server.requests]": true
+
+token:
+  type: ${TOKEN_TYPE}
+  secret: ${TOKEN_SECRET}
+  expiration: ${TOKEN_EXPIRATION}
+
+clients:
+  user-service: ${USER_SERVICE_URL}

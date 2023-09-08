@@ -1,0 +1,3 @@
+CREATE USER some_user WITH PASSWORD 'pass';
+CREATE DATABASE user_db;
+GRANT ALL PRIVILEGES ON DATABASE user_db TO some_user;

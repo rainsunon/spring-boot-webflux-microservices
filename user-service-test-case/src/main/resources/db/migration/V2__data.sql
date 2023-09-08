@@ -1,0 +1,2 @@
+INSERT INTO public.users (first_name, last_name, birthday_at, email, password, role) VALUES ('Иван', 'Иванов', '1998-06-05', 'admin@mail.ru', '$2a$12$3zI6SYjs0IHhqYm4bWXtBOZu.CEZgLF01ryRuBzl6CP7uNvQMSNf.', 'ROLE_ADMIN');
+INSERT INTO public.users (first_name, last_name, birthday_at, email, password, role) VALUES ('Артём', 'Смирнов', '2000-07-07', 'user@mail.ru', '$2a$12$3zI6SYjs0IHhqYm4bWXtBOZu.CEZgLF01ryRuBzl6CP7uNvQMSNf.', 'ROLE_USER');

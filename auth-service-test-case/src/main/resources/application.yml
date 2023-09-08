@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: auth-service
+  profiles:
+    active: ${PROFILES}
+
+springdoc:
+  api-docs:
+    path: /swagger/api-docs
+  swagger-ui:
+    path: /swagger/docs.html
+
